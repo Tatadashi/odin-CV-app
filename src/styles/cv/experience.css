@@ -1,0 +1,25 @@
+div.experience h4 {
+  margin-block: 0;
+}
+
+div.experienceFacility {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.experienceFacility ul {
+  padding-left: 25px;
+  margin: 0;
+}
+
+div.experienceFacility li:nth-child(2) {
+  list-style: none;
+}
+
+ul.experienceResponsibilities {
+  margin-block: 0;
+}
+
+div.experienceRightPart {
+  text-align: right;
+}

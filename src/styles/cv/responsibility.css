@@ -1,0 +1,11 @@
+li.responsibility {
+  list-style: circle;
+}
+
+li.responsibility h4 {
+  float: left;
+}
+
+.responsibilityDescription {
+  margin: 0;
+}

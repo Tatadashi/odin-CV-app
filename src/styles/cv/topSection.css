@@ -1,0 +1,17 @@
+section.topSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3.topSectionName {
+  margin-top: 0;
+}
+
+h4.topSectionOtherInfo {
+  font-weight: normal;
+  margin: 0;
+}
+
+div.topSectionRightPart {
+  text-align: right;
+}
