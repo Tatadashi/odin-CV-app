@@ -1,8 +1,4 @@
-li.responsibility {
-  list-style: circle;
-}
-
-li.responsibility h4 {
+h4.responsibilityName {
   float: left;
 }
 

@@ -20,6 +20,10 @@ ul.experienceResponsibilities {
   margin-block: 0;
 }
 
+li.experienceResponsibility {
+  list-style: circle;
+}
+
 div.experienceRightPart {
   text-align: right;
 }

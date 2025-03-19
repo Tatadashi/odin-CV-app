@@ -1,12 +1,12 @@
 import "../../styles/cv/responsibility.css";
 
-export default function Responsibility({ form }) {
+export default function Responsibility({ info }) {
   return (
-    <li className="responsibility">
-      <h4>{form.responsibility}:&nbsp;</h4>
+    <>
+      <h4 className="responsibilityName">{info.responsibility}:&nbsp;</h4>
       <p className="responsibilityDescription">
-        {form.responsibilityDescription}
+        {info.responsibilityDescription}
       </p>
-    </li>
+    </>
   );
 }
