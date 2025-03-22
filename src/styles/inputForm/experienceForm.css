@@ -1,0 +1,15 @@
+div.experienceForm {
+  display: flex;
+  flex-direction: column;
+}
+
+ul.responsibilitiesListForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+}
+
+li.responsibilitiesForm {
+  list-style: none;
+}

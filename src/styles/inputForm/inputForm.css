@@ -1,0 +1,29 @@
+div.inputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+div.inputForm label {
+  text-align: center;
+}
+
+div.inputForm input,
+div.inputForm textarea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+ul.educationListForm,
+ul.experienceListForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+}
+
+li.educationForm,
+li.experienceForm {
+  list-style: none;
+}

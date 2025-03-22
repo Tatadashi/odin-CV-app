@@ -1,27 +1,18 @@
-import "../../styles/cv/nonTopSection.css";
+import "../../styles/cv/educationSection.css";
 import Education from "./education";
 
-export default function EducationSection() {
+export default function EducationSection({ educationList }) {
   return (
     <>
-      <h3 className="sectionTitle">Education</h3>
-      <section className="nonTopSection">
-        <Education
-          form={{
-            educationFacility: "Some School/Uni",
-            educationMajorAndGPA: "Master of Yap in Yapology; GPA 10.0",
-            educationLocation: "YapTown, YA",
-            educationTime: "Mar. 2000 - Mar. 2000",
-          }}
-        />
-        <Education
-          form={{
-            educationFacility: "Some School/Uni",
-            educationMajorAndGPA: "Master of Yap in Yapology; GPA 10.0",
-            educationLocation: "YapTown, YA",
-            educationTime: "Mar. 2000 - Mar. 2000",
-          }}
-        />
+      <h3 className="educationSectionTitle">Education</h3>
+      <section className="educationSection">
+        <ul className="educationList">
+          {educationList.map((education, index) => (
+            <li key={index} className="education">
+              <Education info={education} />
+            </li>
+          ))}
+        </ul>
       </section>
     </>
   );

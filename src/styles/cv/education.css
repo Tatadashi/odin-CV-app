@@ -1,18 +1,9 @@
-div.education {
-  display: flex;
-  justify-content: space-between;
-}
-
-.education h4 {
-  margin-block: 0;
-}
-
-ul.educationList {
+ul.educationLeftPart {
   padding-left: 25px;
   margin: 0;
 }
 
-ul.educationList > li:nth-child(2) {
+ul.educationLeftPart > li:nth-child(2) {
   list-style: none;
 }
 

@@ -1,22 +1,24 @@
 import "../../styles/cv/education.css";
 
-export default function Education({ form }) {
+export default function Education({ info }) {
   return (
-    <div className="education">
+    <>
       <div>
-        <ul className="educationList">
+        <ul className="educationLeftPart">
           <li>
-            <h4>{form.educationFacility}</h4>
+            <h4>{info.facility}</h4>
           </li>
           <li>
-            <i>{form.educationMajorAndGPA}</i>
+            <i>
+              {info.major}; GPA: {info.GPA}
+            </i>
           </li>
         </ul>
       </div>
       <div className="educationRightPart">
-        <h4>{form.educationLocation}</h4>
-        <i>{form.educationTime}</i>
+        <h4>{info.location}</h4>
+        <i>{info.time}</i>
       </div>
-    </div>
+    </>
   );
 }

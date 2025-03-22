@@ -1,0 +1,4 @@
+div.responsibilityForm {
+  display: flex;
+  flex-direction: column;
+}

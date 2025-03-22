@@ -1,31 +1,31 @@
 import "../../styles/cv/experience.css";
 import Responsibility from "./responsibility.jsx";
 
-export default function Experience({ form }) {
+export default function Experience({ info }) {
   return (
     <div className="experience">
       <div className="experienceFacility">
         <ul>
           <li>
-            <h4>{form.experienceFacility}</h4>
+            <h4>{info.facility}</h4>
           </li>
           <li>
-            <i>{form.experienceTitle}</i>
+            <i>{info.title}</i>
           </li>
         </ul>
         <div className="educationRightPart">
-          <h4>{form.experienceLocation}</h4>
-          <i>{form.experienceTime}</i>
+          <h4>{info.location}</h4>
+          <i>{info.time}</i>
         </div>
       </div>
-      <ul className="experienceResponsibilities">
-        {form.responsibilitiesList.map(responsibility => {
+      <ul className="responsibilities">
+        {info.responsibilitiesList.map((responsibility, index) => {
           return (
-            <li key={responsibility.name} className="experienceResponsibility">
+            <li key={index} className="responsibility">
               <Responsibility
                 info={{
-                  responsibility: responsibility.name,
-                  responsibilityDescription: responsibility.description,
+                  name: responsibility.name,
+                  description: responsibility.description,
                 }}
               />
             </li>

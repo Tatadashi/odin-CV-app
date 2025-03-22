@@ -1,0 +1,21 @@
+h3.educationSectionTitle {
+  border-bottom: 1px solid black;
+  font-weight: normal;
+  margin-block: 5px;
+}
+
+section.educationSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ul.educationList {
+  padding: 0;
+  margin: 0;
+}
+
+li.education {
+  display: flex;
+  justify-content: space-between;
+}

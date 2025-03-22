@@ -1,0 +1,4 @@
+div.cv {
+  display: flex;
+  flex-direction: column;
+}
