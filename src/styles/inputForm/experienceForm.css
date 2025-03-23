@@ -1,6 +1,7 @@
 div.experienceForm {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 ul.responsibilitiesListForm {

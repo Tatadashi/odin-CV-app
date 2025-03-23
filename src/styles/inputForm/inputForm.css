@@ -1,10 +1,11 @@
 div.inputForm {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
 div.inputForm label {
+  font-weight: bold;
   text-align: center;
 }
 
@@ -26,4 +27,5 @@ ul.experienceListForm {
 li.educationForm,
 li.experienceForm {
   list-style: none;
+  margin-bottom: 20px;
 }

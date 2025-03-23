@@ -1,5 +1,6 @@
 import "../../styles/inputForm/experienceForm.css";
-import ResponsibilityForm from "./responsibilityForm";
+import Collapsible from "./collapsible.jsx";
+import ResponsibilityForm from "./responsibilityForm.jsx";
 
 export default function ExperienceForm({
   index,
@@ -48,14 +49,16 @@ export default function ExperienceForm({
       <ul className="responsibilitiesListForm">
         {/**not using responsibility but need it since 2nd parameter is index */}
         {experienceList[index].responsibilitiesList.map((responsibility, i) => (
-          <li key={i} className="responsibilitiesForm">
-            <ResponsibilityForm
-              experienceIndex={index}
-              index={i}
-              experienceList={experienceList}
-              setExperienceList={setExperienceList}
-            />
-          </li>
+          <Collapsible name="Responsibility Info Form" index={i + 1}>
+            <li key={i} className="responsibilitiesForm">
+              <ResponsibilityForm
+                experienceIndex={index}
+                index={i}
+                experienceList={experienceList}
+                setExperienceList={setExperienceList}
+              />
+            </li>
+          </Collapsible>
         ))}
       </ul>
     </div>
