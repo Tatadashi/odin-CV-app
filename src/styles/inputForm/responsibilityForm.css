@@ -4,3 +4,11 @@ div.responsibilityForm {
   gap: 10px;
   margin-bottom: 20px;
 }
+
+button.deleteResponsibility {
+  background-color: lightpink;
+}
+
+button.deleteResponsibility:hover {
+  background-color: lightcoral;
+}

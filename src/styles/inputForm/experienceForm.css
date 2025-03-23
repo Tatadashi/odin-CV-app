@@ -5,6 +5,14 @@ div.experienceForm {
   margin-bottom: 15px;
 }
 
+button.deleteExperience {
+  background-color: lightpink;
+}
+
+button.deleteExperience:hover {
+  background-color: lightcoral;
+}
+
 ul.responsibilitiesListForm {
   display: flex;
   flex-direction: column;

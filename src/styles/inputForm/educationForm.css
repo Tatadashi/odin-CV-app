@@ -4,3 +4,11 @@ div.educationForm {
   gap: 10px;
   margin-bottom: 20px;
 }
+
+button.deleteEducation {
+  background-color: lightpink;
+}
+
+button.deleteEducation:hover {
+  background-color: lightcoral;
+}

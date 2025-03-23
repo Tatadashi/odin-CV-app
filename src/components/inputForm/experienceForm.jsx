@@ -13,6 +13,12 @@ export default function ExperienceForm({
     setExperienceList(newList);
   };
 
+  const deleteExperience = () => {
+    const newList = [...experienceList];
+    newList.splice(index, 1);
+    setExperienceList(newList);
+  };
+
   const addResponsibility = () => {
     const newList = [...experienceList];
     newList[index].responsibilitiesList.push({
@@ -73,6 +79,9 @@ export default function ExperienceForm({
           </li>
         ))}
       </ul>
+      <button className="deleteExperience" onClick={deleteExperience}>
+        Delete Experience
+      </button>
     </div>
   );
 }

@@ -11,6 +11,12 @@ export default function EducationForm({
     setEducationList(newList);
   };
 
+  const deleteEducation = () => {
+    const newList = [...educationList];
+    newList.splice(index, 1);
+    setEducationList(newList);
+  };
+
   return (
     <div className="educationForm">
       <label>
@@ -53,6 +59,9 @@ export default function EducationForm({
           onChange={(e) => handleChange("time", e.target.value)}
         ></input>
       </label>
+      <button className="deleteEducation" onClick={deleteEducation}>
+        Delete Education {index + 1}
+      </button>
     </div>
   );
 }

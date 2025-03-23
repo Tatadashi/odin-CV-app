@@ -12,6 +12,12 @@ export default function ResponsibilityForm({
       infoProperty;
     setExperienceList(newList);
   };
+
+  const deleteResponsibility = () => {
+    const newList = [...experienceList];
+    newList[experienceIndex].responsibilitiesList.splice(index, 1);
+    setExperienceList(newList);
+  };
   return (
     <div className="responsibilityForm">
       <label>
@@ -36,6 +42,9 @@ export default function ResponsibilityForm({
           onChange={(e) => handleChange("description", e.target.value)}
         ></textarea>
       </label>
+      <button className="deleteResponsibility" onClick={deleteResponsibility}>
+        Delete Responsibility
+      </button>
     </div>
   );
 }
