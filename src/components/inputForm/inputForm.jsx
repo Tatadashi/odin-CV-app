@@ -12,6 +12,29 @@ export default function InputForm({
   experienceList,
   setExperienceList,
 }) {
+  const addEducation = () => {
+    const newList = [...educationList];
+    newList.push({
+      facility: "",
+      major: "",
+      GPA: "",
+      location: "",
+      time: "",
+    });
+    setEducationList(newList);
+  };
+
+  const addExperience = () => {
+    const newList = [...experienceList];
+    newList.push({
+      facility: "",
+      title: "",
+      location: "",
+      time: "",
+      responsibilitiesList: [],
+    });
+    setExperienceList(newList);
+  };
   return (
     <div className="inputForm">
       <Collapsible name="Personal Info Form">
@@ -21,31 +44,37 @@ export default function InputForm({
         />
       </Collapsible>
       <ul className="educationListForm">
+        <button className="addEducation" onClick={addEducation}>
+          Add New Education
+        </button>
         {/**not using education but need it since 2nd parameter is index */}
         {educationList.map((education, index) => (
-          <Collapsible name="Education Info Form" index={index + 1}>
-            <li key={index} className="educationForm">
+          <li key={index} className="educationForm">
+            <Collapsible name="Education Info Form" index={index + 1}>
               <EducationForm
                 index={index}
                 educationList={educationList}
                 setEducationList={setEducationList}
               />
-            </li>
-          </Collapsible>
+            </Collapsible>
+          </li>
         ))}
       </ul>
       <ul className="experienceListForm">
+        <button className="addExperience" onClick={addExperience}>
+          Add New Experience
+        </button>
         {/**not using experience but need it since 2nd parameter is index */}
         {experienceList.map((experience, index) => (
-          <Collapsible name="Experience Info Form" index={index + 1}>
-            <li key={index} className="experienceForm">
+          <li key={index} className="experienceForm">
+            <Collapsible name="Experience Info Form" index={index + 1}>
               <ExperienceForm
                 index={index}
                 experienceList={experienceList}
                 setExperienceList={setExperienceList}
               />
-            </li>
-          </Collapsible>
+            </Collapsible>
+          </li>
         ))}
       </ul>
     </div>

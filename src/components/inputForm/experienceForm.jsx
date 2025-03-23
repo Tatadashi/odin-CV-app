@@ -12,6 +12,15 @@ export default function ExperienceForm({
     newList[index][infoType] = infoProperty;
     setExperienceList(newList);
   };
+
+  const addResponsibility = () => {
+    const newList = [...experienceList];
+    newList[index].responsibilitiesList.push({
+      name: "",
+      description: "",
+    });
+    setExperienceList(newList);
+  };
   return (
     <div className="experienceForm">
       <label>
@@ -47,18 +56,21 @@ export default function ExperienceForm({
         ></input>
       </label>
       <ul className="responsibilitiesListForm">
+        <button className="addResponsibility" onClick={addResponsibility}>
+          Add New Responsibility
+        </button>
         {/**not using responsibility but need it since 2nd parameter is index */}
         {experienceList[index].responsibilitiesList.map((responsibility, i) => (
-          <Collapsible name="Responsibility Info Form" index={i + 1}>
-            <li key={i} className="responsibilitiesForm">
+          <li key={i} className="responsibilitiesForm">
+            <Collapsible name="Responsibility Info Form" index={i + 1}>
               <ResponsibilityForm
                 experienceIndex={index}
                 index={i}
                 experienceList={experienceList}
                 setExperienceList={setExperienceList}
               />
-            </li>
-          </Collapsible>
+            </Collapsible>
+          </li>
         ))}
       </ul>
     </div>

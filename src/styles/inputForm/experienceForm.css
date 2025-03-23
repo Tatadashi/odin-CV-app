@@ -2,6 +2,7 @@ div.experienceForm {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 15px;
 }
 
 ul.responsibilitiesListForm {
@@ -13,4 +14,12 @@ ul.responsibilitiesListForm {
 
 li.responsibilitiesForm {
   list-style: none;
+}
+
+button.addResponsibility {
+  background-color: lightblue;
+}
+
+button.addResponsibility:hover {
+  background-color: lightsteelblue;
 }

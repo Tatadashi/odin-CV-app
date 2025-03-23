@@ -27,5 +27,14 @@ ul.experienceListForm {
 li.educationForm,
 li.experienceForm {
   list-style: none;
-  margin-bottom: 20px;
+}
+
+button.addEducation,
+button.addExperience {
+  background-color: lightblue;
+}
+
+button.addEducation:hover,
+button.addExperience:hover {
+  background-color: lightsteelblue;
 }
