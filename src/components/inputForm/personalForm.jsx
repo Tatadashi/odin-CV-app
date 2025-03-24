@@ -1,4 +1,5 @@
 import "../../styles/inputForm/personalForm.css";
+import { useState } from "react";
 
 export default function PersonalForm({ personalInfo, setPersonalInfo }) {
   const handleChange = (infoType, infoProperty) => {
@@ -8,8 +9,27 @@ export default function PersonalForm({ personalInfo, setPersonalInfo }) {
     });
   };
 
+  const [originalInfo, setOriginalInfo] = useState(personalInfo);
+  const simulateToggleForm = () => {
+    const toggleStateButton = document.querySelector(
+      "div.personalInfoForm button"
+    );
+    toggleStateButton.click();
+  };
+  const revert = (e) => {
+    e.preventDefault();
+    setPersonalInfo(originalInfo);
+    simulateToggleForm();
+  };
+  const submit = (e) => {
+    e.preventDefault();
+    setOriginalInfo(personalInfo);
+    simulateToggleForm();
+  };
+
   return (
-    <div className="personalForm">
+    <form className="personalForm" onSubmit={(e) => e.preventDefault()}>
+      <h2>Personal Info Form</h2>
       <label>
         Enter your Name:
         <input
@@ -50,6 +70,14 @@ export default function PersonalForm({ personalInfo, setPersonalInfo }) {
           onChange={(e) => handleChange("github", e.target.value)}
         ></input>
       </label>
-    </div>
+      <div className="formButtons">
+        <button className="cancelButton" onClick={(e) => revert(e)}>
+          Cancel
+        </button>
+        <button className="submitButton" onClick={(e) => submit(e)}>
+          Submit
+        </button>
+      </div>
+    </form>
   );
 }

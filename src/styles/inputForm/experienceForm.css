@@ -1,8 +1,12 @@
-div.experienceForm {
+form.experienceForm {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 15px;
+}
+
+form.experienceForm h2 {
+  text-align: center;
 }
 
 button.deleteExperience {
@@ -13,14 +17,15 @@ button.deleteExperience:hover {
   background-color: lightcoral;
 }
 
-ul.responsibilitiesListForm {
+ul.responsibilityListForm {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 0;
+  background-color: lavender;
+  padding: 10px;
 }
 
-li.responsibilitiesForm {
+li.responsibilityForm {
   list-style: none;
 }
 

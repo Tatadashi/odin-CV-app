@@ -1,8 +1,12 @@
-div.educationForm {
+form.educationForm {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
+}
+
+form.educationForm h2 {
+  text-align: center;
 }
 
 button.deleteEducation {

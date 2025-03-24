@@ -1,5 +1,11 @@
-div.personalForm {
+form.personalForm {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+form.personalForm h2 {
+  text-align: center;
 }

@@ -1,4 +1,5 @@
 import "../../styles/inputForm/educationForm.css";
+import { useState } from "react";
 
 export default function EducationForm({
   index,
@@ -11,14 +12,39 @@ export default function EducationForm({
     setEducationList(newList);
   };
 
-  const deleteEducation = () => {
+  //create a true copy rather than one by reference to prevent them from affecting each other
+  const [originalEducationList, setOriginalEducationList] = useState(
+    JSON.parse(JSON.stringify(educationList))
+  );
+  const simulateToggleForm = () => {
+    const toggleStateButton = document.querySelector(
+      `div.educationInfoForm${index + 1} button`
+    );
+    toggleStateButton.click();
+  };
+
+  const deleteEducation = (e) => {
+    e.preventDefault();
     const newList = [...educationList];
     newList.splice(index, 1);
     setEducationList(newList);
+    simulateToggleForm();
   };
 
+  const revert = (e) => {
+    e.preventDefault();
+    setEducationList(originalEducationList);
+    simulateToggleForm();
+  };
+  const submit = (e) => {
+    e.preventDefault();
+    //create a true copy rather than one by reference to prevent them from affecting each other
+    setOriginalEducationList(JSON.parse(JSON.stringify(educationList)));
+    simulateToggleForm();
+  };
   return (
-    <div className="educationForm">
+    <form className="educationForm" onSubmit={(e) => e.preventDefault()}>
+      <h2>Education Info Form {index + 1}</h2>
       <label>
         Enter the Name of the Education Facility:
         <input
@@ -59,9 +85,17 @@ export default function EducationForm({
           onChange={(e) => handleChange("time", e.target.value)}
         ></input>
       </label>
-      <button className="deleteEducation" onClick={deleteEducation}>
+      <div className="formButtons">
+        <button className="cancelButton" onClick={(e) => revert(e)}>
+          Cancel
+        </button>
+        <button className="submitButton" onClick={(e) => submit(e)}>
+          Submit
+        </button>
+      </div>
+      <button className="deleteEducation" onClick={(e) => deleteEducation(e)}>
         Delete Education {index + 1}
       </button>
-    </div>
+    </form>
   );
 }

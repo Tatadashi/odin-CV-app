@@ -33,7 +33,7 @@ function App() {
       title: "Yap God",
       location: "YapTown, YA",
       time: "Mar. 2000 - Mar. 2000",
-      responsibilitiesList: [
+      responsibilityList: [
         {
           name: "Yapping",
           description:
@@ -50,7 +50,7 @@ function App() {
       title: "A Higher Up",
       location: "Los Angeles, CA",
       time: "Jan. 2020 - Present",
-      responsibilitiesList: [
+      responsibilityList: [
         {
           name: "Creating Meetings",
           description:
@@ -75,7 +75,11 @@ function App() {
         experienceList={experienceList}
         setExperienceList={setExperienceList}
       />
-      <Cv personalInfo={personalInfo} educationList={educationList} experienceList={experienceList}  />
+      <Cv
+        personalInfo={personalInfo}
+        educationList={educationList}
+        experienceList={experienceList}
+      />
     </div>
   );
 }

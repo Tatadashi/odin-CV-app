@@ -31,7 +31,7 @@ export default function InputForm({
       title: "",
       location: "",
       time: "",
-      responsibilitiesList: [],
+      responsibilityList: [],
     });
     setExperienceList(newList);
   };
@@ -49,8 +49,12 @@ export default function InputForm({
         </button>
         {/**not using education but need it since 2nd parameter is index */}
         {educationList.map((education, index) => (
-          <li key={index} className="educationForm">
-            <Collapsible name="Education Info Form" index={index + 1}>
+          <li key={index} index={index + 1} className="educationForm">
+            <Collapsible
+              name="Education Info Form"
+              formName="educationListForm"
+              index={index + 1}
+            >
               <EducationForm
                 index={index}
                 educationList={educationList}
@@ -66,8 +70,12 @@ export default function InputForm({
         </button>
         {/**not using experience but need it since 2nd parameter is index */}
         {experienceList.map((experience, index) => (
-          <li key={index} className="experienceForm">
-            <Collapsible name="Experience Info Form" index={index + 1}>
+          <li key={index} index={index + 1} className="experienceForm">
+            <Collapsible
+              name="Experience Info Form"
+              formName="experienceListForm"
+              index={index + 1}
+            >
               <ExperienceForm
                 index={index}
                 experienceList={experienceList}

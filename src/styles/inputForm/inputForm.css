@@ -13,6 +13,7 @@ div.inputForm input,
 div.inputForm textarea {
   display: flex;
   flex-direction: column;
+  padding: 0;
   width: 100%;
 }
 
@@ -20,13 +21,17 @@ ul.educationListForm,
 ul.experienceListForm {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 15px;
-  padding: 0;
+  border: 2px solid gray;
+  padding: 10px;
 }
 
 li.educationForm,
 li.experienceForm {
   list-style: none;
+  background-color: aliceblue;
+  padding: 10px;
 }
 
 button.addEducation,

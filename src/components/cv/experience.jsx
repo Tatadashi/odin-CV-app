@@ -19,7 +19,7 @@ export default function Experience({ info }) {
         </div>
       </div>
       <ul className="responsibilities">
-        {info.responsibilitiesList.map((responsibility, index) => {
+        {info.responsibilityList.map((responsibility, index) => {
           return (
             <li key={index} className="responsibility">
               <Responsibility

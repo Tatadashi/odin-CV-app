@@ -5,6 +5,10 @@ div.responsibilityForm {
   margin-bottom: 20px;
 }
 
+div.responsibilityForm {
+  text-align: center;
+}
+
 button.deleteResponsibility {
   background-color: lightpink;
 }
